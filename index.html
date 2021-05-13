@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/7c254fb8d3.js" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+    <title>SPA</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">SPA</a>
+    </nav>
+      <div class="alert alert-success alert-dismissible" id="successmain" style="display:none;"></div><br>
+      <div class="main-content">
+
+<!-- Toevoegen -->
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalToevoeg">Nieuwe ToDo aanmaken</button><br><br><br>
+        <div class="modal fade" id="modalToevoeg" tabindex="-1" role="dialog"
+        aria-labelledby="modal1-label" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="modal1-label">Toevoegen</h5>
+                   <button type="button" class="close" data-dismiss="modal"
+                           aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+
+<!-- in de modal-body komt de inhoud van de modal -->
+
+               <div class="modal-body">
+                   
+<!-- Invoer formulier -->
+
+                     <div class="alert alert-success alert-dismissible" id="success" style="display:none;"></div>
+                        <form id="invoegform">
+                     <input type="text" class="invoer" id="invoer" required></div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+                   <input type="button" name="save" class="btn btn-primary" value="Opslaan" id="knop">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Database Uitlees lijstje -->
+
+<div class="lijst" id="lijst"></div>
+    
+<!-- BEGIN MODEL AANPASMODEL -->
+
+<div class="modal fade" id="pasaanModal" tabindex="-1" role="dialog" aria-labelledby="pasaanModal-label" aria-hidden="true">
+<div class="modal-dialog" role="document">
+   <div class="modal-content">
+       <div class="modal-header">
+           <h5 class="modal-title" id="pasaanModal-label"></h5>
+           <button type="button" class="close" data-dismiss="modal"
+                   aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+           </button>
+       </div>
+       <div class="modal-body">
+           <div id="aanpasInfo"></div>
+
+           <div class="alert alert-success alert-dismissible" id="successaanpas" style="display:none;"></div>
+                     <form id="aanpasform">
+                     <input type="hidden" name="aanpasID" class="aanpasID" id="aanpasID">
+                     <input type="text" class="aanpasinvoer" id="aanpasinvoer" value="" required>
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+                   <input type="button" name="save" class="btn btn-primary" value="Wijzig" id="knopaanpas">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EINDE MODAL AANPASMODEL -->
+
+<!-- BEGIN MODEL VERWIJDER -->
+
+<div class="modal fade" id="verwijderModal" tabindex="-1" role="dialog" aria-labelledby="verwijderModal-label" aria-hidden="true">
+<div class="modal-dialog" role="document">
+   <div class="modal-content">
+       <div class="modal-header">
+           <h5 class="modal-title" id="verwijderModal-label"></h5>
+           <button type="button" class="close" data-dismiss="modal"
+                   aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+           </button>
+       </div>
+       <div class="modal-body">
+           <div id="verwijderInfo"></div>
+
+           <div class="alert alert-success alert-dismissible" id="successverwijder" style="display:none;"></div>
+                     <form id="verwijderform">
+                     <input type="hidden" name="verwijderID" class="verwijderID" id="verwijderID">
+                  </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal" id="laatmaarknop">Laat maar</button>
+                   <input type="button" name="save" class="btn btn-primary" value="Ja, verwijder mij!" id="knopverwijder">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EINDE MODAL VERWIJDERMODEL -->
+
+    </div>
+</div>
+</body>
+</html>

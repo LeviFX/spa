@@ -1,0 +1,67 @@
+body {
+    background-image: url("img/paper.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.statusV {
+    color: #1bde4b;
+}
+.statusO {
+    color: rgb(26, 61, 179);
+
+}
+.main-content {
+    max-width: 800px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.card {
+    max-width: 550px;
+    border: 1px solid black;
+    text-align: center;
+    -webkit-box-shadow: 7px 7px 15px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 15px -8px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 15px -8px rgba(0,0,0,0.75);
+    border: 1px solid black;
+    height: auto;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.card:hover {
+    max-width: 650px;
+    -webkit-box-shadow: 13px 13px 17px -8px rgba(0,0,0,0.65);
+    -moz-box-shadow: 13px 13px 17px -8px rgba(0,0,0,0.65);
+    box-shadow: 13px 13px 17px -8px rgba(0,0,0,0.65);
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.card button {
+    max-width: 47%;
+    min-width: 47%;
+    margin: auto;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.card button:hover {
+    max-width: 57%;
+    min-width: 57%;
+    margin: auto;
+    text-align: center;
+    transition: 0.2s;
+}
+
+u {
+    text-decoration: underline solid black 2px;
+}
