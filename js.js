@@ -41,12 +41,14 @@ function toonLijst() {
     console.log(id);
     $("#aanpasInfo").html("ID: " + id + "");
     $("#aanpasID").html("ID: " + id + "");
-
+        
+/*
 $(document).ready(function () {
     var afstand = Math.floor(Math.random() * 400); 
                  console.log(afstand);
     document.getElementById("roodpin").style.left = "" + afstand + "px";
 });
+*/
 
 // Aanpas script
 
